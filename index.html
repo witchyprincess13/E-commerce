@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Food Delivery App</h1>
+        <div id="header-elements">
+            <input type="text" id="search-bar" placeholder="Search for food...">
+            <img src="assets/user.png" alt="Profile" id="profile-icon">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="banner">
+            <h2>Ongoing Offers and Discounts</h2>
+            <p>Get 20% off on your first order! Use code: FIRST20</p>
+        </section>
+        
+        <section id="menu">
+            <h2>Menu</h2>
+            <div id="menu-items"></div>
+        </section>
+
+        <aside id="sidebar">
+            <section id="cart">
+                <h2>Cart</h2>
+                <div id="cart-summary"></div>
+                <label for="coupon">Coupon Code:</label>
+                <input type="text" id="coupon" placeholder="Enter coupon code">
+                <button id="apply-coupon">Apply Coupon</button>
+                <div id="cart-totals"></div>
+                <button id="place-order-button">Place Order</button>
+            </section>
+
+            <section id="checkout">
+                <h2>Checkout</h2>
+                <div class="progress">
+                    <div class="progress-step active" id="step-shipping">Shipping</div>
+                    <div class="progress-step" id="step-payment">Payment</div>
+                </div>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment">Payment Option:</label>
+                        <select id="payment" name="payment" required>
+                            <option value="credit-card">Credit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="cash-on-delivery">Cash on Delivery</option>
+                            <option value="upi">UPI</option>
+                            <option value="net-banking">Net Banking</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tip">Tip for Delivery Partner:</label>
+                        <input type="number" id="tip" name="tip" min="0">
+                    </div>
+                    <button type="submit">Confirm Order</button>
+                </form>
+            </section>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Food Delivery App</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
